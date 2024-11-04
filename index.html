@@ -3,52 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to CreativeLifes</title>
+    <title>CreativeLifes.com</title>
     <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
         body {
             font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f4f9;
-        }
-        .container {
-            text-align: center;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
+            line-height: 1.6;
+            background-color: #f4f4f4;
             color: #333;
         }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            color: #fff;
-            background-color: #007bff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
+
+        /* Header styling */
+        header {
+            background-color: #35424a;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
         }
-        button:hover {
-            background-color: #0056b3;
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        /* Navigation bar */
+        nav {
+            background-color: #e8491d;
+            color: #ffffff;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        /* Main content styling */
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 30px 0;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 40px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        section h2 {
+            margin-bottom: 15px;
+            color: #e8491d;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #35424a;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .container {
+                width: 90%;
+            }
         }
     </style>
 </head>
 <body>
+
+    <!-- Header -->
+    <header>
+        <h1>Welcome to CreativeLifes.com</h1>
+        <p>Your hub for creativity and inspiration</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
     <div class="container">
-        <h1>Welcome to CreativeLifes</h1>
-        <p>Discover creativity and inspiration!</p>
-        <button onclick="showMessage()">Click Me</button>
+        <!-- Home Section -->
+        <section id="home">
+            <h2>Home</h2>
+            <p>Welcome to CreativeLifes.com! We are dedicated to providing you with the best content and services to fuel your creativity. Explore our website to discover more.</p>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Us</h2>
+            <p>At CreativeLifes.com, our mission is to inspire and empower creative minds. Whether you're an artist, writer, or entrepreneur, we have resources and tools to help you succeed.</p>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Creative Workshops</li>
+                <li>Design Consultancy</li>
+                <li>Content Creation</li>
+                <li>Online Courses</li>
+            </ul>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <p>Check out some of our latest projects and collaborations. We're proud of the work we've done and are excited to share it with you.</p>
+            <!-- You can add images or project links here -->
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Have questions or want to work with us? Get in touch!</p>
+            <form action="#" method="post">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+                <input type="submit" value="Send Message">
+            </form>
+        </section>
     </div>
 
-    <script>
-        function showMessage() {
-            alert("Thank you for visiting CreativeLifes!");
-        }
-    </script>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 CreativeLifes.com | Designed by Your Name</p>
+    </footer>
+
 </body>
 </html>
