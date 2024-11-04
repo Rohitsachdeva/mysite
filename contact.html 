@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CreativeLifes.com | Home</title>
+    <title>Contact Us | CreativeLifes.com</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <h1>Welcome to CreativeLifes.com</h1>
-    <p>Your hub for creativity and inspiration</p>
+    <h1>Contact Us</h1>
 </header>
 
 <nav>
@@ -26,9 +25,19 @@
 
 <div class="container">
     <section>
-        <h2>Discover Your Creative Potential</h2>
-        <p>At CreativeLifes, we believe everyone has untapped creative potential. Join us and explore your passions with our resources, services, and community support.</p>
-        <a href="about.html" class="cta">Learn More About Us</a>
+        <h2>Get In Touch</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+            <input type="submit" value="Send Message">
+        </form>
     </section>
 </div>
 
