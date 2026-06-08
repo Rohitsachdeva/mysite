@@ -6,93 +6,190 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Watch Repair Centre offers professional watch repair, battery replacement, mechanical servicing, and restoration. Call +1 672-472-9000.">
 
+  <!-- Elegant Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #333;
-      line-height: 1.6;
+    :root {
+      --accent: #f7c6d0;
+      --accent-hover: #f9d5dd;
+      --dark: #111;
+      --dark-secondary: #1a1a1a;
+      --light-text: #f5f5f5;
     }
 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Playfair Display", serif;
+      line-height: 1.7;
+      color: #333;
+      background: #fff;
+    }
+
+    /* HERO SECTION */
     header {
-      background: #111;
-      color: #fff;
-      padding: 80px 20px;
+      background: linear-gradient(135deg, #000, #1a1a1a);
+      color: white;
       text-align: center;
+      padding: 100px 20px;
     }
 
     header h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
+      font-size: 52px;
+      color: var(--accent);
+      font-style: italic;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
     }
 
     header p {
-      font-size: 18px;
       max-width: 700px;
-      margin: 0 auto 30px;
+      margin: 0 auto 35px;
+      font-size: 20px;
+      color: #ddd;
+      font-style: italic;
     }
 
+    /* BUTTONS */
     .btn {
-      background: #c9a14a;
-      color: #000;
-      padding: 14px 30px;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 4px;
       display: inline-block;
+      background: var(--accent);
+      color: #111;
+      text-decoration: none;
+      padding: 14px 34px;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: all 0.3s ease;
     }
 
+    .btn:hover {
+      background: var(--accent-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(247, 198, 208, 0.4);
+    }
+
+    /* SECTIONS */
     section {
-      padding: 60px 20px;
-      max-width: 1000px;
+      padding: 80px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
       margin: auto;
     }
 
     h2 {
       text-align: center;
-      margin-bottom: 40px;
-      font-size: 32px;
+      font-size: 38px;
+      margin-bottom: 35px;
+      color: var(--accent);
+      font-style: italic;
+      letter-spacing: 1px;
     }
 
+    /* ABOUT */
+    .about p {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    /* SERVICES */
     .services {
-      background: #f7f7f7;
+      background: #111;
     }
 
     .service-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
     }
 
     .service-box {
-      background: #fff;
-      padding: 25px;
-      border-radius: 6px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      background: linear-gradient(145deg, #1f1f1f, #0d0d0d);
+      padding: 30px;
+      border-radius: 15px;
+      border: 1px solid rgba(247, 198, 208, 0.25);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+      transition: all 0.3s ease;
+    }
+
+    .service-box:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent);
+      box-shadow: 0 15px 35px rgba(247, 198, 208, 0.15);
     }
 
     .service-box h3 {
-      margin-top: 0;
-      color: #111;
+      color: var(--accent);
+      font-size: 24px;
+      font-style: italic;
+      margin-bottom: 12px;
     }
 
+    .service-box p {
+      color: #e5e5e5;
+      font-size: 16px;
+    }
+
+    /* CONTACT */
     .contact {
-      background: #111;
-      color: #fff;
+      background: linear-gradient(135deg, #000, #1a1a1a);
+      color: white;
       text-align: center;
+    }
+
+    .contact h2 {
+      margin-bottom: 20px;
     }
 
     .contact p {
       font-size: 18px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      color: #ddd;
     }
 
+    .phone {
+      color: var(--accent);
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 25px;
+      display: block;
+      font-style: italic;
+    }
+
+    /* FOOTER */
     footer {
       background: #000;
-      color: #aaa;
+      color: #999;
       text-align: center;
-      padding: 15px;
+      padding: 20px;
       font-size: 14px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      header {
+        padding: 70px 20px;
+      }
+
+      header h1 {
+        font-size: 38px;
+      }
+
+      header p {
+        font-size: 18px;
+      }
+
+      h2 {
+        font-size: 30px;
+      }
     }
   </style>
 </head>
@@ -101,63 +198,98 @@
   <!-- HERO -->
   <header>
     <h1>Watch Repair Centre</h1>
-    <p>Professional watch repair and servicing — from battery replacement to full mechanical overhauls.</p>
-    <a href="tel:+16724729000" class="btn">Call +1 672-472-9000</a>
+    <p>
+      Professional watch repair and servicing — from battery replacement
+      to complete mechanical overhauls.
+    </p>
+
+    <a href="tel:+16724729000" class="btn">
+      Call +1 672-472-9000
+    </a>
   </header>
 
   <!-- ABOUT -->
-  <section>
-    <h2>About Us</h2>
-    <p>
-      Watch Repair Centre is your trusted destination for expert watch repair and maintenance.
-      We service quartz and mechanical watches with precision, care, and attention to detail.
-      Whether it’s a simple battery change or a complete restoration, your timepiece is in safe hands.
-    </p>
+  <section class="about">
+    <div class="container">
+      <h2>About Us</h2>
+
+      <p>
+        Watch Repair Centre is your trusted destination for expert watch repair
+        and maintenance. We service quartz and mechanical watches with precision,
+        care, and attention to detail. Whether it's a simple battery replacement
+        or a complete restoration, your timepiece is in safe hands.
+      </p>
+    </div>
   </section>
 
   <!-- SERVICES -->
   <section class="services">
-    <h2>Our Services</h2>
+    <div class="container">
+      <h2>Our Services</h2>
 
-    <div class="service-grid">
-      <div class="service-box">
-        <h3>Battery Replacement</h3>
-        <p>Fast and reliable battery replacement for all major watch brands.</p>
-      </div>
+      <div class="service-grid">
 
-      <div class="service-box">
-        <h3>Mechanical & Quartz Repair</h3>
-        <p>Full servicing, cleaning, lubrication, and regulation of watch movements.</p>
-      </div>
+        <div class="service-box">
+          <h3>Battery Replacement</h3>
+          <p>
+            Fast and reliable battery replacement for all major watch brands.
+          </p>
+        </div>
 
-      <div class="service-box">
-        <h3>Crystal Replacement</h3>
-        <p>Repair or replacement of scratched or broken watch crystals.</p>
-      </div>
+        <div class="service-box">
+          <h3>Mechanical & Quartz Repair</h3>
+          <p>
+            Full servicing, cleaning, lubrication, and regulation of watch movements.
+          </p>
+        </div>
 
-      <div class="service-box">
-        <h3>Water Resistance Testing</h3>
-        <p>Professional pressure testing to ensure your watch remains water-tight.</p>
-      </div>
+        <div class="service-box">
+          <h3>Crystal Replacement</h3>
+          <p>
+            Repair or replacement of scratched or broken watch crystals.
+          </p>
+        </div>
 
-      <div class="service-box">
-        <h3>Band & Bracelet Adjustment</h3>
-        <p>Link removal, resizing, strap replacement, and clasp repairs.</p>
-      </div>
+        <div class="service-box">
+          <h3>Water Resistance Testing</h3>
+          <p>
+            Professional pressure testing to ensure your watch remains water-tight.
+          </p>
+        </div>
 
-      <div class="service-box">
-        <h3>Watch Restoration</h3>
-        <p>Case polishing and restoration to bring your watch back to life.</p>
+        <div class="service-box">
+          <h3>Band & Bracelet Adjustment</h3>
+          <p>
+            Link removal, resizing, strap replacement, and clasp repairs.
+          </p>
+        </div>
+
+        <div class="service-box">
+          <h3>Watch Restoration</h3>
+          <p>
+            Case polishing and restoration to bring your watch back to life.
+          </p>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section class="contact">
-    <h2>Contact Watch Repair Centre</h2>
-    <p>📞 Phone: <strong>+1 672-472-9000</strong></p>
-    <p>Call us today for inquiries, quotes, or to book a repair.</p>
-    <a href="tel:+16724729000" class="btn">Call Now</a>
+    <div class="container">
+      <h2>Contact Watch Repair Centre</h2>
+
+      <span class="phone">+1 672-472-9000</span>
+
+      <p>
+        Call us today for inquiries, quotes, or to schedule your repair.
+      </p>
+
+      <a href="tel:+16724729000" class="btn">
+        Call Now
+      </a>
+    </div>
   </section>
 
   <!-- FOOTER -->
