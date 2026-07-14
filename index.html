@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Watch Repair Centre offers professional watch repair, battery replacement, mechanical servicing, and restoration. Call +1 672-472-9000.">
 
+  <!-- Google AdSense: loader belongs in <head>. This alone enables Auto Ads
+       (once you turn Auto ads ON for this site in your AdSense dashboard). -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8642570566748807"
+     crossorigin="anonymous"></script>
+
   <!-- Elegant Font -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
 
@@ -138,6 +143,27 @@
       font-size: 16px;
     }
 
+    /* AD UNIT */
+    .ad-section {
+      background: #111;
+      padding: 40px 20px;
+    }
+    .ad-unit {
+      max-width: 1100px;
+      margin: auto;
+      min-height: 100px;
+      text-align: center;
+    }
+    .ad-label {
+      display: block;
+      color: #666;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      font-family: Arial, sans-serif;
+    }
+
     /* CONTACT */
     .contact {
       background: linear-gradient(135deg, #000, #1a1a1a);
@@ -251,27 +277,29 @@
         </div>
 
         <div class="service-box">
-          <h3>Water Resistance Testing</h3>
-          <p>
-            Professional pressure testing to ensure your watch remains water-tight.
-          </p>
-        </div>
-
-        <div class="service-box">
           <h3>Band & Bracelet Adjustment</h3>
           <p>
             Link removal, resizing, strap replacement, and clasp repairs.
           </p>
         </div>
 
-        <div class="service-box">
-          <h3>Watch Restoration</h3>
-          <p>
-            Case polishing and restoration to bring your watch back to life.
-          </p>
-        </div>
-
       </div>
+    </div>
+  </section>
+
+  <!-- IN-CONTENT AD UNIT -->
+  <!-- Manual display ad. Create an ad unit in your AdSense dashboard
+       (Ads > By ad unit > Display ads) and paste its slot ID into
+       data-ad-slot below, replacing 0000000000. -->
+  <section class="ad-section">
+    <div class="ad-unit">
+      <span class="ad-label">Advertisement</span>
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-8642570566748807"
+           data-ad-slot="0000000000"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
     </div>
   </section>
 
@@ -296,6 +324,11 @@
   <footer>
     © 2026 Watch Repair Centre. All Rights Reserved.
   </footer>
+
+  <!-- Activate the manual ad unit(s) above. One push() per <ins> on the page. -->
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
 
 </body>
 </html>
